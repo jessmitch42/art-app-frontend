@@ -10,6 +10,13 @@ import Artists from './components/artists'
 
 
 class App extends Component {
+  componentDidMount() {
+    // if (!this.props.artists.length) {
+    //   this.props.actions.fetchArtists();
+    // }
+  }
+
+
   render() {
     return (
       <Router>

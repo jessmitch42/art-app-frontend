@@ -1,9 +1,12 @@
-export default function manageArtworks(state = {artworks: []}, action) {
+export default function manageArtworks(state = {artworks: [], loading: false}, action) {
   switch (action.type) {
 
-    case 'ADD_ARTWORK':
+    case 'LOADING_ARTWORKS':
+      return state;
 
-      return state
+    case 'ADD_ARTWORKS':
+
+      return state;
 
     default:
       return state;
