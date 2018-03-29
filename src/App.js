@@ -15,8 +15,10 @@ import Artists from './components/artists'
 
 class App extends Component {
   componentDidMount() {
+    console.log(this.props)
     if (!this.props.artists.length) {
       this.props.actions.fetchArtists();
+      console.log(this.props.artists)
     }
   }
 

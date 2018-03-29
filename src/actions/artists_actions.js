@@ -4,6 +4,6 @@ export function fetchArtists() {
     dispatch({ type: 'LOADING_ARTISTS' });
     return fetch('http://localhost:4000/artists')
       .then(response => response.json())
-      .then(res => console.log(res));
+      .then(res => dispatch({ type: 'ADD_ARTISTS', artists: res }));
   };
 }
