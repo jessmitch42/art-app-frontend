@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -28,7 +29,9 @@ class App extends Component {
       <Router>
       <div>
         <Header />
-        <Route exact path="/" component={Artists} />
+        <Switch>
+          <Route exact path="/" component={Artists} />
+        </Switch>
       </div>
     </Router>
     )
@@ -39,6 +42,7 @@ const mapStateToProps = (state) => {
   console.log(state)
   return {
     artists: state.artists,
+    artworks: state.artworks
   };
 };
 
