@@ -4,6 +4,10 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from './actions/artists_actions.js'
+
 
 import Header from './components/header'
 import Artists from './components/artists'
@@ -11,9 +15,9 @@ import Artists from './components/artists'
 
 class App extends Component {
   componentDidMount() {
-    // if (!this.props.artists.length) {
-    //   this.props.actions.fetchArtists();
-    // }
+    if (!this.props.artists.length) {
+      this.props.actions.fetchArtists();
+    }
   }
 
 
@@ -29,4 +33,17 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    artists: state.artists,
+  };
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+
+
+export const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
