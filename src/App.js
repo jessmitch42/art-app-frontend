@@ -30,7 +30,7 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={Artists} />
+          <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
         </Switch>
       </div>
     </Router>
