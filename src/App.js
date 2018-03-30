@@ -18,10 +18,10 @@ import Artworks from './components/artworks'
 
 class App extends Component {
   componentDidMount() {
-    console.log(this.props)
+    console.log(this.props.location)
     if (!this.props.artists.length) {
       this.props.actions.fetchArtists();
-      console.log(this.props.artists)
+      // console.log(this.props.artists)
     }
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
           <Route exact path="/artists" render={()=><Artists artists={this.props.artists}/>} />
-          <Route path={`/artists/:artistId/artworks`} render={()=><Artworks artist={this.props.artists}/>} />
+          <Route path={`/artists/:artistId/artworks`} render={()=><Artworks />} />
         </Switch>
       </div>
     </Router>
@@ -43,7 +43,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
+  // console.log(state)
   return {
     artists: state.people.artists,
     artworks: state.objects.artworks

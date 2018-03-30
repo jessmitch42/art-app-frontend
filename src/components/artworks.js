@@ -1,15 +1,20 @@
-import React from 'react';
-import Artwork from './artwork'
+import React, { Component } from 'react';
 
-const Artworks = (props) => {
-  console.log("IN ARTOWRKS.JS")
-  console.log(props)
 
-  return (
-    <div className="artists-container">
-      I am here
-    </div>
-  );
+export default class Artworks extends Component {
+  componentDidMount() {
+    if (!this.props.artworks.length) {
+      this.props.actions.fetchArtworks();
+      // console.log(this.props.artists)
+    }
+
+  }
+
+  render() {
+    return (
+      <div className="artists-container">
+        I am here
+      </div>
+    );
+  }
 }
-
-export default Artworks;
