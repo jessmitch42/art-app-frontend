@@ -3,11 +3,7 @@ import React, { Component } from 'react';
 
 export default class Artworks extends Component {
   componentDidMount() {
-    if (!this.props.artworks.length) {
-      this.props.actions.fetchArtworks();
-      // console.log(this.props.artists)
-    }
-
+    // request artworks by this artists if they aren't already available 
   }
 
   render() {

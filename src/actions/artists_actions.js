@@ -1,5 +1,5 @@
 export function fetchArtists() {
-  console.log("here!!!")
+  console.log("in fetchArtists action")
   return (dispatch) => {
     dispatch({ type: 'LOADING_ARTISTS' });
     return fetch('http://localhost:4000/artists')

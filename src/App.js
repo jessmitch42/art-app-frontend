@@ -18,10 +18,10 @@ import Artworks from './components/artworks'
 
 class App extends Component {
   componentDidMount() {
-    console.log(this.props.location)
+    console.log("in App componentDidMount")
     if (!this.props.artists.length) {
       this.props.actions.fetchArtists();
-      // console.log(this.props.artists)
+      console.log("in if statement for fetchArtists (App)")
     }
   }
 
@@ -43,7 +43,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state)
+  console.log("in App mapStateToProps")
   return {
     artists: state.people.artists,
     artworks: state.objects.artworks
@@ -51,6 +51,7 @@ const mapStateToProps = (state) => {
 };
 
 function mapDispatchToProps(dispatch) {
+  console.log("in App mapDispatchToProps")
   return {
     actions: bindActionCreators(actions, dispatch)
   };

@@ -2,7 +2,7 @@ import React from 'react';
 import Artist from './artist'
 
 const Artists = (props) => {
-  // console.log(props.artists.loading)
+  console.log("in Artists")
   let artists = !props.artists.loading ? props.artists.map(a => <Artist artist={a}/>) : "";
 
   return (
