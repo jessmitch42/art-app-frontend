@@ -12,6 +12,8 @@ import * as actions from './actions/artists_actions.js'
 
 import Header from './components/header'
 import Artists from './components/artists'
+import Artworks from './components/artworks'
+
 
 
 class App extends Component {
@@ -31,6 +33,8 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
+          <Route exact path="/artists" render={()=><Artists artists={this.props.artists}/>} />
+          <Route path={`/artists/:artistId/artworks`} render={()=><Artworks artist={this.props.artists}/>} />
         </Switch>
       </div>
     </Router>
