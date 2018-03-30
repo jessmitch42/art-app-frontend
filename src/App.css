@@ -15,3 +15,13 @@
   margin: 0;
   color: #DF029D
 }
+
+.artists-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.artists-container img {
+  width: 250px;
+}

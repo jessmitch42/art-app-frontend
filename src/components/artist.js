@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Artist = () => {
+const Artist = (props) => {
+  console.log("ARTISTS HEREEE")
+  console.log(props)
   return (
-    <div className="artist__container">
-      <img src="" alt="I'm a picture"/>
-      <div className="artist__name">Im a name</div>
-      <div className="artist__life-dates">Im a birthdate</div>
-      <div className="artist__bio">Im a biography</div>
+    <div id={"artist-"+props.artist.id} className="artist__container">
+      <img className="artist-img" src={`http://localhost:4000/img/${props.artist.img}.png`} alt="I'm a picture"/>
+      <div className="artist__name">{props.artist.first_name} {props.artist.last_name}</div>
     </div>
   );
 }

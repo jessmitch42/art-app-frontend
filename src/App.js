@@ -41,8 +41,8 @@ class App extends Component {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    artists: state.artists,
-    artworks: state.artworks
+    artists: state.people.artists,
+    artworks: state.objects.artworks
   };
 };
 
