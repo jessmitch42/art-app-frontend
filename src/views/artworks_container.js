@@ -5,7 +5,7 @@ import * as actions from '../actions/artworks_actions'
 class ArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artowrk componentDidMount")
-    // console.log(this.props.match.params.artistId)
+    console.log(this.props)
     // let artistId = this.props.match.params.artistId;
     // this.props.actions.fetchArtworks(artistId);
     // console.log("in if statement for fetchArtworks (App)")

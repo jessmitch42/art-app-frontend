@@ -34,10 +34,14 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artists}/>} />
+            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artists} />} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/artists" render={()=><ArtistsContainer artists={this.props.artists}/>} />
-            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.artistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.currentArtistId}/>} />
+            <Route exact path="/artists" render={()=>
+              <ArtistsContainer
+              artists={this.props.artists}
+              setId={this.props.globalActions}/>} />
+
           </Switch>
         </div>
       </Router>
@@ -49,7 +53,7 @@ const mapStateToProps = (state) => {
   console.log("in App mapStateToProps")
   return {
     artists: state.artists,
-    artworks: state.artworks,
+    artworks: [],
     loading: false,
     currentArtistId: null
   };

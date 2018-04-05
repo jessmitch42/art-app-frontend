@@ -4,3 +4,17 @@ export function setCurrentArtist(id) {
     currentArtistId: id
   };
 }
+
+export function loading() {
+  return {
+    type: 'LOADING_DATA',
+    loading: true
+  };
+}
+
+export function stopLoading() {
+  return {
+    type: 'STOP_LOADING_DATA',
+    loading: false
+  };
+}
