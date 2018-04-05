@@ -35,12 +35,15 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artists} />} />
+            
             <Route exact path="/about" component={About} />
-            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.currentArtistId}/>} />
+
             <Route exact path="/artists" render={()=>
               <ArtistsContainer
               artists={this.props.artists}
               setId={this.props.globalActions}/>} />
+
+            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.currentArtistId}/>} />
 
           </Switch>
         </div>
