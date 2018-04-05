@@ -1,25 +1,8 @@
-const initialState = {
-  artists: [],
-  loading: false
-}
-
-export default function manageArtists(state = initialState, action) {
+export default function manageArtists(state = [], action) {
   switch (action.type) {
-
-    case 'LOADING_ARTISTS':
-
-      return {
-        ...state,
-        loading: true
-      }
-
+    
     case 'ADD_ARTISTS':
-      return {
-        ...state,
-        artists: action.artists,
-        loading: false
-      }
-
+      return action.artists;
     default:
       return state;
 

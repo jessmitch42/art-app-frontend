@@ -4,6 +4,7 @@ export function fetchArtworks(artistId) {
     dispatch({ type: 'LOADING_ARTWORKS' });
     return fetch(`http://localhost:4000/artists/${artistId}/artworks`)
       .then(response => response.json())
-      .then(res => dispatch({ type: 'ADD_ARTWORKS', artworks: res }));
+      .then(res => console.log(res));
   };
 }
+// dispatch({ type: 'ADD_ARTWORKS', artworks: res })

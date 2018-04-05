@@ -11,8 +11,8 @@ import * as actions from './actions/artists_actions.js'
 
 
 import Header from './components/header'
-import Artists from './components/artists'
-import Artworks from './components/artworks'
+import ArtistsContainer from './components/artists_container'
+import ArtworksContainer from './components/artworks_container'
 import About from './components/about'
 
 
@@ -33,10 +33,10 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
+            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artists}/>} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/artists" render={()=><Artists artists={this.props.artists}/>} />
-            <Route path={`/artists/:artistId/artworks`} component={Artworks} />
+            <Route exact path="/artists" render={()=><ArtistsContainer artists={this.props.artists}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.artistId}/>} />
           </Switch>
         </div>
       </Router>
@@ -47,8 +47,10 @@ class App extends Component {
 const mapStateToProps = (state) => {
   console.log("in App mapStateToProps")
   return {
-    artists: state.artists.artists,
-    artworks: state.artworks.artworks
+    artists: state.artists,
+    artworks: state.artworks,
+    loading: false,
+    currentArtistId: {}
   };
 };
 
