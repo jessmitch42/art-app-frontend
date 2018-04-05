@@ -14,7 +14,6 @@ export default function manageArtists(state = initialState, action) {
       }
 
     case 'ADD_ARTISTS':
-    console.log(action)
       return {
         ...state,
         artists: action.artists,
