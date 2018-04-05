@@ -7,7 +7,7 @@ export default function manageArtworks(state = initialState, action) {
   switch (action.type) {
 
     case 'LOADING_ARTWORKS':
-      return state;
+      return state.artworks;
 
     case 'ADD_ARTWORKS':
 

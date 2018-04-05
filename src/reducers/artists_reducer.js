@@ -8,16 +8,18 @@ export default function manageArtists(state = initialState, action) {
 
     case 'LOADING_ARTISTS':
 
-      return Object.assign({}, state, {
+      return {
+        ...state,
         loading: true
-      })
+      }
 
     case 'ADD_ARTISTS':
     console.log(action)
-      return Object.assign({}, state, {
+      return {
+        ...state,
         artists: action.artists,
         loading: false
-      })
+      }
 
     default:
       return state;
