@@ -7,7 +7,8 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as actions from './actions/artists_actions.js'
+import * as actions from './actions/artists_actions'
+import * as globalActions from './actions/app_actions'
 
 
 import Header from './components/header'
@@ -50,14 +51,15 @@ const mapStateToProps = (state) => {
     artists: state.artists,
     artworks: state.artworks,
     loading: false,
-    currentArtistId: {}
+    currentArtistId: null
   };
 };
 
 function mapDispatchToProps(dispatch) {
   console.log("in App mapDispatchToProps")
   return {
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(actions, dispatch),
+    globalActions: bindActionCreators(globalActions, dispatch)
   };
 }
 
