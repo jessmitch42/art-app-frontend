@@ -4,8 +4,8 @@ import artworks_reducer from './artists_reducer';
 
 
 const rootReducer = combineReducers({
-  people: artists_reducer,
-  objects: artworks_reducer
+  artists_reducer,
+  artworks_reducer
 });
 
 export default rootReducer;

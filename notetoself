@@ -1,3 +1,4 @@
 todo:
 - nomatch component in router Switch for 404 msg
-- about page 
+- about page
+- error handling for fetches
