@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as actions from './actions/artists_actions'
-import * as globalActions from './actions/app_actions'
+import * as actions from './actions/artActions'
+import * as globalActions from './actions/appActions'
 
 
 import Header from './components/header'
@@ -22,7 +22,7 @@ import About from './components/about'
 class App extends Component {
   componentDidMount() {
     console.log("in App componentDidMount")
-    if (!this.props.artists.length) {
+    if (!this.props.artistsList.length) {
       this.props.actions.fetchArtists();
       console.log("in if statement for fetchArtists (App)")
     }
@@ -34,16 +34,16 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artists} />} />
-            
+            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
+
             <Route exact path="/about" component={About} />
 
             <Route exact path="/artists" render={()=>
               <ArtistsContainer
-              artists={this.props.artists}
-              setId={this.props.globalActions}/>} />
+              artists={this.props.artistsList}
+              globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.artworks} artistId={this.props.currentArtistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
 
           </Switch>
         </div>
@@ -55,10 +55,10 @@ class App extends Component {
 const mapStateToProps = (state) => {
   console.log("in App mapStateToProps")
   return {
-    artists: state.artists,
-    artworks: [],
-    loading: false,
-    currentArtistId: null
+    artistsList: state.artists,
+    currentArtistArtwork: state.artworks,
+    loading: state.global.loading,
+    currentArtistId: state.global.currentArtistId
   };
 };
 

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import * as actions from '../actions/artActions';
+
 // import Artwork from './artwork'
 
 class ArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artowrk componentDidMount")
-    // let artistId = this.props.match.params.artistId;
-    // this.props.actions.fetchArtworks(artistId);
-    // console.log("in if statement for fetchArtworks (App)")
+    console.log(actions)
+
+    actions.fetchArtworks(this.props.artistId);
+    console.log("in if statement for fetchArtworks (App)")
   }
 
   render() {

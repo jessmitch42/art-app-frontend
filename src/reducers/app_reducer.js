@@ -15,7 +15,7 @@ export default function manageGlobalState(state = {loading: false, currentArtist
     console.log(action)
       return {
         ...state,
-        currentArtistId: action.artist
+        currentArtistId: action.currentArtistId
       }
     default:
       return state;
