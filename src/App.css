@@ -7,6 +7,7 @@
   height: 7rem;
   padding: 20px;
   color: white;
+  display: flex;
 }
 
 .App-title {
@@ -27,4 +28,13 @@
 
 .artists-container img {
   width: 250px;
+}
+
+.about-container {
+  padding: 5%;
+  color: #0f050c;
+}
+
+.about-container span.about-page__quote {
+  color: #DF029D;
 }
