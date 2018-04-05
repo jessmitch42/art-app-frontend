@@ -12,8 +12,8 @@ import * as globalActions from './actions/app_actions'
 
 
 import Header from './components/header'
-import ArtistsContainer from './components/artists_container'
-import ArtworksContainer from './components/artworks_container'
+import ArtistsContainer from './views/artists_container'
+import ArtworksContainer from './views/artworks_container'
 import About from './components/about'
 
 
