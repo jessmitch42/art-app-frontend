@@ -27,20 +27,19 @@ class App extends Component {
     }
   }
 
-
   render() {
     return (
       <Router>
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/artists" render={()=><Artists artists={this.props.artists}/>} />
-          <Route path={`/artists/:artistId/artworks`} render={()=><Artworks />} />
-        </Switch>
-      </div>
-    </Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/" render={()=><Artists artists={this.props.artists}/>} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/artists" render={()=><Artists artists={this.props.artists}/>} />
+            <Route path={`/artists/:artistId/artworks`} component={Artworks} />
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }
