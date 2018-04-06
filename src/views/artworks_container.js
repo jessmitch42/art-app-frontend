@@ -15,7 +15,7 @@ class ArtworksContainer extends Component {
   render() {
     const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <Artwork artwork={a} key={a.id}/>);
     return (
-      <div className="artwork__container wrapper">
+      <div className="artwork-container wrapper">
         <FlipMove
           staggerDelayBy={100}>
           {currentArtistArtworks}
