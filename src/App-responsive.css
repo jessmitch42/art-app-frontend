@@ -1,0 +1,53 @@
+@media only screen and (max-width: 770px) {
+  .artists-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+
+  .App-title {
+    font-size: 7rem;
+  }
+
+  .App-header {
+    height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .App-title {
+    font-size: 6rem;
+  }
+
+  .App-header {
+    height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .App-title {
+    font-size: 5rem;
+  }
+
+  .App-header {
+    height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .artists-container {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .App-title {
+    font-size: 4.5rem;
+  }
+
+  .App-header {
+    height: 3.5rem;
+  }
+
+
+}

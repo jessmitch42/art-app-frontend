@@ -1,3 +1,7 @@
+html {
+  width: 100%;
+}
+
 .wrapper {
   padding: 5%;
   max-width: 1000px;
@@ -43,16 +47,17 @@ a:hover {
 }
 
 .artists-container {
-  -webkit-column-count: 5;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 5;
-  -moz-column-gap: 0px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 5px;
+  -moz-column-count: 3;
+  -moz-column-gap: 5px;
   column-count: 3;
   column-gap: 5px;
+  width: 100%;
 }
 
 .artists-container img {
-  width: 250px;
+  width: 100%;
 }
 
 .about-container {

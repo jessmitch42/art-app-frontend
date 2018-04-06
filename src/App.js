@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import './App-responsive.css';
+
 import {
   BrowserRouter as Router,
   Route,

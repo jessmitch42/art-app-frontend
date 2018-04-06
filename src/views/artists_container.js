@@ -9,7 +9,8 @@ const ArtistsContainer = (props) => {
 
   return (
     <div className="artists-container">
-      <FlipMove staggerDelayBy={100}>
+      <FlipMove
+        staggerDelayBy={130}>
         {artists}
       </FlipMove>
     </div>
