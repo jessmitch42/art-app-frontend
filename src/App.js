@@ -27,7 +27,6 @@ class App extends Component {
     if (!this.props.artistsList.length) {
       this.props.actions.fetchArtists();
     }
-    // this.props.actions.fetchArtworks(1);
   }
 
   render() {
@@ -36,18 +35,18 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <div className="wrapper">
-              <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
 
-              <Route exact path="/about" component={About} />
+            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
 
-              <Route exact path="/artists" render={()=>
-                <ArtistsContainer
-                artists={this.props.artistsList}
-                globalActions={this.props.globalActions}/>} />
+            <Route exact path="/about" component={About} />
 
-              <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
-            </div>
+            <Route exact path="/artists" render={()=>
+              <ArtistsContainer
+              artists={this.props.artistsList}
+              globalActions={this.props.globalActions}/>} />
+
+            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+
           </Switch>
         </div>
       </Router>
