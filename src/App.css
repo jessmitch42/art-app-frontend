@@ -55,6 +55,15 @@ a:hover {
   column-count: 3;
   column-gap: 5px;
   width: 100%;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.artist__container {
+  margin: 0;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari */
+  page-break-inside: avoid;           /* Theoretically FF 20+ */
+  break-inside: avoid-column;         /* IE 11 */
+  display:table;                      /* Actually FF 20+ */
 }
 
 .artwork-container {

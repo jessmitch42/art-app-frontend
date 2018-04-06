@@ -14,8 +14,8 @@ import * as globalActions from './actions/appActions';
 
 
 import Header from './components/header';
-import ArtistsContainer from './views/artistsPreviewContainer';
-import { ConnectedArtworksContainer } from './views/artistFullArtworksContainer';
+import AllArtistsContainer from './views/allArtistsContainer';
+import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
 import About from './components/about';
 
 
@@ -36,16 +36,16 @@ class App extends Component {
           <Header />
           <Switch>
 
-            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
+            <Route exact path="/" render={()=><AllArtistsContainer artists={this.props.artistsList} />} />
 
             <Route exact path="/about" component={About} />
 
             <Route exact path="/artists" render={()=>
-              <ArtistsContainer
+              <AllArtistsContainer
               artists={this.props.artistsList}
               globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedShowArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
 
           </Switch>
         </div>

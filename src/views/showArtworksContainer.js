@@ -6,7 +6,7 @@ import FlipMove from 'react-flip-move';
 
 import Artwork from '../components/artwork'
 
-class ArtworksContainer extends Component {
+class showArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artowrk componentDidMount")
     this.props.artActions.fetchArtworks(this.props.artistId);
@@ -40,4 +40,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export const ConnectedArtworksContainer = connect(mapStateToProps, mapDispatchToProps)(ArtworksContainer);
+export const ConnectedShowArtworksContainer = connect(mapStateToProps, mapDispatchToProps)(showArtworksContainer);
