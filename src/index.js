@@ -13,9 +13,6 @@ const store = createStore(rootReducer, /* preloadedState, */ composeEnhancers(
     applyMiddleware(thunk)
   ));
 
-
-console.log(store);
-
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedApp />

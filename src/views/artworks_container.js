@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as actions from '../actions/artActions';
+import * as artActions from '../actions/artActions';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -8,14 +8,13 @@ import { bindActionCreators } from 'redux'
 class ArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artowrk componentDidMount")
-    console.log(actions)
-
-    actions.fetchArtworks(this.props.artistId);
-    console.log("in if statement for fetchArtworks (App)")
+    console.log(this.props)
+    this.props.artActions.fetchArtworks(this.props.artistId);
   }
 
   render() {
-    // const currentArtistArtworks = this.props.
+    const currentArtistArtworks = this.props.currentArtistArtwork;
+    console.log(currentArtistArtworks)
     return (
       <div className="artwork__container">
           Im an artwork
@@ -26,8 +25,8 @@ class ArtworksContainer extends Component {
 
 const mapStateToProps = (state) => {
   console.log("in App mapStateToProps")
+  console.log(state)
   return {
-    ...state,
     currentArtistArtwork: state.artworks,
   };
 };
@@ -35,7 +34,7 @@ const mapStateToProps = (state) => {
 function mapDispatchToProps(dispatch) {
   console.log("in App mapDispatchToProps")
   return {
-    actions: bindActionCreators(actions, dispatch)
+    artActions: bindActionCreators(artActions, dispatch)
   };
 }
 

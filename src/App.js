@@ -24,8 +24,8 @@ class App extends Component {
     console.log("in App componentDidMount")
     if (!this.props.artistsList.length) {
       this.props.actions.fetchArtists();
-      console.log("in if statement for fetchArtists (App)")
     }
+    // this.props.actions.fetchArtworks(1);
   }
 
   render() {
@@ -43,7 +43,7 @@ class App extends Component {
               artists={this.props.artistsList}
               globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer artworks={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
 
           </Switch>
         </div>
