@@ -1,5 +1,5 @@
 html {
-  width: 100%;
+  width: 100vw;
 }
 
 .wrapper {
@@ -36,7 +36,7 @@ a:hover {
   height: 7rem;
   color: white;
   display: flex;
-  padding-left: 5%;
+  padding-left: 2%;
 }
 
 .App-title {
@@ -64,7 +64,7 @@ a:hover {
   -moz-column-gap: 5px;
   column-count: 2;
   column-gap: 5px;
-  width: 100%;
+  width: 88%;
 }
 
 .artists-container img,

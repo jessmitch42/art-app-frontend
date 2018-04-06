@@ -14,8 +14,8 @@ import * as globalActions from './actions/appActions';
 
 
 import Header from './components/header';
-import ArtistsContainer from './views/artists_container';
-import { ConnectedArtworksContainer } from './views/artworks_container';
+import ArtistsContainer from './views/artistsPreviewContainer';
+import { ConnectedArtworksContainer } from './views/artistFullArtworksContainer';
 import About from './components/about';
 
 
