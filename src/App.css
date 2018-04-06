@@ -27,16 +27,23 @@ a:hover {
   color: #C32424;
 }
 
-.App-header a {
-  padding: 10px;
-}
-
 .App-header {
   background-color: #C32424;
   height: 7rem;
   color: white;
   display: flex;
-  padding-left: 2%;
+  padding-left: 4%;
+}
+
+.App-header a {
+  align-self: flex-end;
+  padding: 10px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.3rem;
+}
+
+.App-header a:hover {
+  color: #8E024B;
 }
 
 .App-title {
@@ -54,8 +61,12 @@ a:hover {
   -moz-column-gap: 5px;
   column-count: 3;
   column-gap: 5px;
-  width: 100%;
+  width: 90%;
   font-family: 'Cutive Mono', monospace;
+}
+
+.artist__container:hover {
+  opacity: .5;
 }
 
 .avoid-break {
@@ -79,6 +90,10 @@ a:hover {
 .artists-container img,
 .artwork-container img {
   width: 100%;
+}
+
+.artist__name {
+  margin-bottom: 15px;
 }
 
 .about-container {
