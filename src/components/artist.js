@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import * as actions from '../actions/appActions';
 
 class Artist extends Component {
+  // this is a react component instead of a stateless functional component because the plugin "flip-move" that does the artists_container animation requires a react components as children
   render() {
     return (
       <div id={`artist-${this.props.artist.id}`} className="artist__container">
