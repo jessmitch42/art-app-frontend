@@ -46,12 +46,15 @@ a:hover {
   color: #8E024B;
 }
 
+
 .App-title {
   font-size: 8rem;
   font-weight: bold;
   margin: 0;
   color: #DF029D
 }
+
+/* ARTIST PREVIEW CONTAINERS */
 
 .artists-container,
 .artwork-container {
@@ -75,7 +78,10 @@ a:hover {
   page-break-inside: avoid;           /* Theoretically FF 20+ */
   break-inside: avoid-column;         /* IE 11 */
   display:table;                      /* Actually FF 20+ */
+  margin-bottom: 10px;
 }
+
+/* ARTWORK CONTAINERS */
 
 .artwork-container {
   -webkit-column-count: 2;
@@ -92,16 +98,17 @@ a:hover {
   width: 100%;
 }
 
+/* ABOUT PAGE */
 .artist__name {
   margin-bottom: 15px;
 }
 
 .about-container {
-  color: #4c0412;
+  color: #0f050c;
 }
 
 .about-container span.about-page__quote {
-  /* color: #0f050c; */
+  color: #4c0412;
   font-style: italic;
 }
 
