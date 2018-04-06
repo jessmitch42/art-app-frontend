@@ -3,29 +3,24 @@ import * as artActions from '../actions/artActions';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-// import Artwork from './artwork'
+import Artwork from '../components/artwork'
 
 class ArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artowrk componentDidMount")
-    console.log(this.props)
     this.props.artActions.fetchArtworks(this.props.artistId);
   }
 
   render() {
-    const currentArtistArtworks = this.props.currentArtistArtwork;
-    console.log(currentArtistArtworks)
+    const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <Artwork artwork={a} />);
     return (
-      <div className="artwork__container">
-          Im an artwork
-      </div>
+      <div className="artwork__container">{currentArtistArtworks}</div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
   console.log("in App mapStateToProps")
-  console.log(state)
   return {
     currentArtistArtwork: state.artworks,
   };
