@@ -1,17 +1,42 @@
-.App {
+.wrapper {
+  padding: 5%;
+  max-width: 1000px;
+}
 
+hr {
+  color: #C32424;
+  border-color: #C32424;
+  background: #C32424;
+}
+
+a {
+  color: #0f050c;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+a.active {
+  color: #DF029D;
+}
+
+a:hover {
+  color: #C32424;
+}
+
+.App-header a {
+  padding: 10px;
 }
 
 .App-header {
   background-color: #C32424;
   height: 7rem;
-  padding: 20px;
   color: white;
   display: flex;
+  padding-left: 5%;
 }
 
 .App-title {
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: bold;
   margin: 0;
   color: #DF029D
@@ -31,10 +56,10 @@
 }
 
 .about-container {
-  padding: 5%;
-  color: #0f050c;
+  color: #4c0412;
 }
 
 .about-container span.about-page__quote {
-  color: #DF029D;
+  /* color: #0f050c; */
+  font-style: italic;
 }

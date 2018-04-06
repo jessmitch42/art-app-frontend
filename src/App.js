@@ -34,17 +34,18 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
+            <div className="wrapper">
+              <Route exact path="/" render={()=><ArtistsContainer artists={this.props.artistsList} />} />
 
-            <Route exact path="/about" component={About} />
+              <Route exact path="/about" component={About} />
 
-            <Route exact path="/artists" render={()=>
-              <ArtistsContainer
-              artists={this.props.artistsList}
-              globalActions={this.props.globalActions}/>} />
+              <Route exact path="/artists" render={()=>
+                <ArtistsContainer
+                artists={this.props.artistsList}
+                globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
-
+              <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+            </div>
           </Switch>
         </div>
       </Router>
