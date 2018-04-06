@@ -1,10 +1,4 @@
-@media only screen and (max-width: 770px) {
-  .artists-container {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
-
+@media only screen and (max-width: 910px) {
   .App-title {
     font-size: 7rem;
   }
@@ -14,7 +8,12 @@
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
+  .artists-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
   .App-title {
     font-size: 6rem;
   }
@@ -22,9 +21,13 @@
   .App-header {
     height: 5rem;
   }
+
+  .App-header a {
+    font-size: 1rem;
+  }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
   .App-title {
     font-size: 5rem;
   }
@@ -34,7 +37,17 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
+  .App-title {
+    font-size: 4rem;
+  }
+
+  .App-header {
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
   .artists-container {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -42,12 +55,28 @@
   }
 
   .App-title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   .App-header {
-    height: 3.5rem;
+    height: 3rem;
   }
 
 
+}
+
+@media only screen and (max-width: 400px) {
+
+  .App-title {
+    font-size: 3rem;
+  }
+
+  .App-header {
+    height: 2.5rem;
+  }
+
+  .App-header a {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
 }
