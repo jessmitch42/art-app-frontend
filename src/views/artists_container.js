@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from '../components/artist'
+import Artist from '../components/artist';
 
 const ArtistsContainer = (props) => {
   console.log("in Artists")

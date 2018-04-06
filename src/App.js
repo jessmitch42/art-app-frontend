@@ -5,16 +5,16 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as actions from './actions/artActions'
-import * as globalActions from './actions/appActions'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from './actions/artActions';
+import * as globalActions from './actions/appActions';
 
 
-import Header from './components/header'
-import ArtistsContainer from './views/artists_container'
-import { ConnectedArtworksContainer } from './views/artworks_container'
-import About from './components/about'
+import Header from './components/header';
+import ArtistsContainer from './views/artists_container';
+import { ConnectedArtworksContainer } from './views/artworks_container';
+import About from './components/about';
 
 
 
