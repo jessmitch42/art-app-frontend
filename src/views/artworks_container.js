@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import * as artActions from '../actions/artActions';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import FlipMove from 'react-flip-move';
-
-import Artwork from '../components/artwork';
+import Artwork from '../components/artwork'
 
 class ArtworksContainer extends Component {
   componentDidMount() {

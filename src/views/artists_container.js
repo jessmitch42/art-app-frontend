@@ -1,5 +1,6 @@
 import React from 'react';
 import Artist from '../components/artist';
+import FlipMove from 'react-flip-move';
 
 const ArtistsContainer = (props) => {
   console.log("in Artists")
@@ -8,7 +9,9 @@ const ArtistsContainer = (props) => {
 
   return (
     <div className="artists-container">
-      {artists}
+      <FlipMove staggerDelayBy={100}>
+        {artists}
+      </FlipMove>
     </div>
   );
 }
