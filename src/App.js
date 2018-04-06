@@ -13,7 +13,7 @@ import * as globalActions from './actions/appActions'
 
 import Header from './components/header'
 import ArtistsContainer from './views/artists_container'
-import ArtworksContainer from './views/artworks_container'
+import { ConnectedArtworksContainer } from './views/artworks_container'
 import About from './components/about'
 
 
@@ -43,7 +43,7 @@ class App extends Component {
               artists={this.props.artistsList}
               globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ArtworksContainer artworks={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedArtworksContainer artworks={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
 
           </Switch>
         </div>

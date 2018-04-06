@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import artists from './artists_reducer';
-import artworks from './artists_reducer';
+import artworks from './artworks_reducer';
 import global from './app_reducer';
 
 

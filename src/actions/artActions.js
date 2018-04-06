@@ -5,7 +5,7 @@ export function fetchArtists() {
     return fetch('http://localhost:4000/artists')
       .then(response => response.json())
       .then(res => dispatch({ type: 'ADD_ARTISTS', artists: res }))
-      .then(res => dispatch({ type: 'STOP_LOADING_DATA'}))
+      .then(res => dispatch({ type: 'DONE_LOADING_DATA'}))
   };
 }
 
@@ -16,7 +16,6 @@ export function fetchArtworks(artistId) {
     dispatch({ type: 'LOADING_DATA' });
     return fetch(`http://localhost:4000/artists/${artistId}/artworks`)
     .then(res => dispatch({ type: 'ADD_ARTWORKS', artworks: res }))
-    .then(res => dispatch({ type: 'STOP_LOADING_DATA'}))
+    .then(res => dispatch({ type: 'DONE_LOADING_DATA'}))
   };
 }
-// dispatch({ type: 'ADD_ARTWORKS', artworks: res })

@@ -14,7 +14,7 @@ export function loading() {
 
 export function stopLoading() {
   return {
-    type: 'STOP_LOADING_DATA',
+    type: 'DONE_LOADING_DATA',
     loading: false
   };
 }
