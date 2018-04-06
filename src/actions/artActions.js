@@ -6,6 +6,7 @@ export function fetchArtists() {
       .then(response => response.json())
       .then(res => dispatch({ type: 'ADD_ARTISTS', artists: res }))
       .then(() => dispatch({ type: 'DONE_LOADING_DATA'}))
+      .catch(err => console.log(err))
   };
 }
 

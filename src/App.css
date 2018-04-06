@@ -3,7 +3,7 @@ html {
 }
 
 .wrapper {
-  padding: 5%;
+  padding: 10% 5%;
   max-width: 1000px;
 }
 
@@ -58,7 +58,7 @@ a:hover {
   font-family: 'Cutive Mono', monospace;
 }
 
-.artist__container {
+.avoid-break {
   margin: 0;
   -webkit-column-break-inside: avoid; /* Chrome, Safari */
   page-break-inside: avoid;           /* Theoretically FF 20+ */
@@ -88,4 +88,19 @@ a:hover {
 .about-container span.about-page__quote {
   /* color: #0f050c; */
   font-style: italic;
+}
+
+/* ARTIST INFO (BIO, ETC) */
+
+
+.artist-complete__container div {
+  margin-bottom: 10px;
+}
+
+.artist-complete__dates {
+  font-weight: bold;
+}
+
+.artist-complete__sources {
+  word-wrap: break-word;
 }
