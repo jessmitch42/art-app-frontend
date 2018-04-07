@@ -135,7 +135,7 @@ a:hover {
 .artist-complete__container {
   border: 5px solid #DF029D;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 0 20px;
 }
 
 .artist-complete__container div {

@@ -1,4 +1,6 @@
 import React from 'react';
+import ArtistPageHeader from './artistPageHeader';
+import ArtistPageBio from './artistPageBio';
 
 const ArtistCompleteInfo = (props) => {
   // TODO: add state persistance for artist info; the state clears if the page reloads currently, making the below conditions necessary
@@ -7,7 +9,7 @@ const ArtistCompleteInfo = (props) => {
   const sources = props.artist ? `sources: ${props.artist.sources}` : "";
   const formattedName = props.artist ? `${props.artist.first_name.toUpperCase()} ${props.artist.last_name.toUpperCase()}` : "";
 
-  const artistsLifeDates = setLifeDates(props.artist) ;
+  const dates = setLifeDates(props.artist) ;
 
   function setLifeDates(artist) {
     if (!artist) return;
@@ -22,10 +24,8 @@ const ArtistCompleteInfo = (props) => {
 
   return (
       <div className="artist-complete__container">
-        <div className="artist-complete__name">{formattedName}</div>
-        <div className="artist-complete__dates">{artistsLifeDates}</div>
-        <div className="artist-complete__bio">{bio}</div>
-        <div className="artist-complete__sources">{sources}</div>
+        <ArtistPageHeader name={formattedName}/>
+        <ArtistPageBio dates={dates} bio={bio} sources={sources}/>
       </div>
   );
 }
