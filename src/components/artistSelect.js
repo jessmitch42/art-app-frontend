@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/artActions';
 
-let handlers = (dispatch) => {
-  return (key) => {
-    dispatch(actions.sortArtistList(key))
-  };
-}
-
-
-
 class ArtistSelect extends Component {
   handleSelection = (e) => {
     console.log(e)

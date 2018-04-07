@@ -30,22 +30,23 @@ class App extends Component {
   }
 
   render() {
+    const { artistsList, currentArtistArtwork, currentArtistId } = this.props; // destructuring data
     return (
       <Router>
         <div>
           <Header />
           <Switch>
 
-            <Route exact path="/" render={()=><AllArtistsContainer artists={this.props.artistsList} />} />
+            <Route exact path="/" render={()=><AllArtistsContainer artists={artistsList} />} />
 
             <Route exact path="/about" component={About} />
 
             <Route exact path="/artists" render={()=>
               <AllArtistsContainer
-              artists={this.props.artistsList}
+              artists={artistsList}
               globalActions={this.props.globalActions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedShowArtworksContainer currentArtistArtwork={this.props.currentArtistArtwork} artistId={this.props.currentArtistId}/>} />
+            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedShowArtworksContainer currentArtistArtwork={currentArtistArtwork} artistId={currentArtistId}/>} />
 
           </Switch>
         </div>

@@ -1,18 +1,18 @@
-export function setCurrentArtist(id) {
+export const setCurrentArtist = (id) => {
   return {
     type: 'SET_CURRENT_ARTIST',
     currentArtistId: id
   };
 }
 
-export function loading() {
+export const loading = () => {
   return {
     type: 'LOADING_DATA',
     loading: true
   };
 }
 
-export function stopLoading() {
+export const stopLoading = () => {
   return {
     type: 'DONE_LOADING_DATA',
     loading: false

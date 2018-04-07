@@ -1,7 +1,7 @@
 export function fetchArtists() {
   console.log("in fetchArtists action")
   return (dispatch) => {
-    dispatch({ type: 'LOADING_DATA' });
+    dispatch({ type: 'LOADING_DATA' }); //not current using this in components
     return fetch('http://localhost:4000/artists')
       .then(response => response.json())
       .then(res => dispatch({ type: 'ADD_ARTISTS', artists: res }))
@@ -20,12 +20,4 @@ export function fetchArtworks(artistId) {
       .then(() => dispatch({ type: 'DONE_LOADING_DATA'}))
       .catch(err => console.log(err))
   };
-}
-
-export function sortArtistList(sortKey) {
-  console.log("SORTINGGGGG")
-  return (dispatch) => dispatch({
-    type: 'SORT_ARTISTS_LIST',
-    sortKey: sortKey
-  });
 }
