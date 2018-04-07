@@ -1,3 +1,4 @@
+/* GENERAL */
 html {
   width: 100vw;
 }
@@ -27,6 +28,8 @@ a:hover {
   color: #C32424;
 }
 
+/* HEADER */
+
 .App-header {
   background-color: #C32424;
   height: 7rem;
@@ -52,6 +55,21 @@ a:hover {
   font-weight: bold;
   margin: 0;
   color: #DF029D
+}
+
+/* SELECT  */
+.artist-select {
+  display: inline-block;
+  height:30px;
+  width: 150px;
+  padding: 2px 10px 2px 2px;
+  outline: none;
+  color: #74646e;
+  border: 1px solid #C8BFC4;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 2px #ddd8dc;
+  background: #fff;
+  margin-bottom: 15px;
 }
 
 /* ARTIST PREVIEW CONTAINERS */
