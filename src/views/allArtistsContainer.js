@@ -8,33 +8,26 @@ class AllArtistsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
       sortedArtists: []
     };
+
     this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleSelection = (e) => {
-    this.setState({ value: e.target.value });
+    console.log(e.target.value)
     let artists;
 
-    if (this.state.value === "ascending") {
-      console.log("ascendign")
+    if (e.target.value === "ascending") {
       let artists = this.sortAscending(this.props.artists);
-      console.log(artists)
-
       this.setState({sortedArtists: artists});
-      // this.props.artists = this.sortAscending(this.props.artists);
     }
-    else if (this.state.value === "descending") {
+    else if (e.target.value === "age") {
       let artists = this.sortAge(this.props.artists);
-      console.log(artists)
-
       this.setState({sortedArtists: artists});
     }
-    else if (this.state.value === "random") {
+    else if (e.target.value === "random") {
       let artists = this.sortRandom(this.props.artists);
-      console.log(artists)
       this.setState({sortedArtists: artists});
     }
   }
@@ -70,7 +63,7 @@ class AllArtistsContainer extends Component {
         <select className="artist-select" onChange={this.handleSelection}>
           <option selected>Sort Artists</option>
           <option value="ascending">A-Z</option>
-          <option value="descending">Z-A</option>
+          <option value="age">Youngest-Oldest</option>
           <option value="random">Random</option>
         </select>
 
