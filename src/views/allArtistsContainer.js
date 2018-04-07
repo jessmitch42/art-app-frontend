@@ -15,7 +15,6 @@ class AllArtistsContainer extends Component {
   }
 
   handleSelection = (e) => {
-    console.log(e.target.value)
     let artists;
 
     if (e.target.value === "ascending") {

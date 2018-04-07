@@ -16,8 +16,7 @@ import Header from './components/header';
 import AllArtistsContainer from './views/allArtistsContainer';
 import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
 import About from './components/about';
-
-
+import Artwork from './components/artwork';
 
 
 class App extends Component {
@@ -36,16 +35,29 @@ class App extends Component {
           <Header />
           <Switch>
 
-            <Route exact path="/" render={()=><AllArtistsContainer artists={artistsList} />} />
+            <Route
+              exact path="/"
+              render={ () =><AllArtistsContainer
+                artists={artistsList} />} />
 
-            <Route exact path="/about" component={About} />
+            <Route
+              exact path="/about"
+              component={About} />
 
-            <Route exact path="/artists" render={()=>
-              <AllArtistsContainer
-              artists={artistsList}
-              actions={this.props.actions}/>} />
+            <Route
+              exact path="/artists"
+              render={ () =>
+                <AllArtistsContainer
+                  artists={artistsList}
+                  actions={this.props.actions}/>} />
 
-            <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedShowArtworksContainer currentArtistArtwork={currentArtistArtwork} artistId={currentArtistId}/>} />
+            <Route
+              path={`/artists/:artistId/artworks`}
+              render={ () => <ConnectedShowArtworksContainer
+                  currentArtistArtwork={currentArtistArtwork}
+                  artistId={currentArtistId}/>} />
+
+
 
           </Switch>
         </div>

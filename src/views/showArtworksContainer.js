@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import FlipMove from 'react-flip-move';
 
-import Artwork from '../components/artwork'
+import ArtworkFlipContainer from '../components/artworkFlipContainer'
 import ArtistCompleteInfo from '../components/artistCompleteInfo';
 
 class showArtworksContainer extends Component {
@@ -15,7 +15,7 @@ class showArtworksContainer extends Component {
   }
 
   render() {
-    const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <Artwork artwork={a} key={a.id}/>);
+    const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <ArtworkFlipContainer artwork={a} key={a.id}/>);
     return (
         <div className="artwork-container wrapper">
 
