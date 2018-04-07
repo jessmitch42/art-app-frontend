@@ -21,3 +21,11 @@ export function fetchArtworks(artistId) {
       .catch(err => console.log(err))
   };
 }
+
+export function sortArtistList(sortKey) {
+  console.log("SORTINGGGGG")
+  return (dispatch) => dispatch({
+    type: 'SORT_ARTISTS_LIST',
+    sortKey: sortKey
+  });
+}
