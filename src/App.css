@@ -132,6 +132,11 @@ a:hover {
 
 /* ARTIST INFO (BIO, ETC) */
 
+.artist-complete__container {
+  border: 5px solid #DF029D;
+  margin-bottom: 10px;
+  padding: 5px;
+}
 
 .artist-complete__container div {
   margin-bottom: 10px;

@@ -17,7 +17,7 @@ const About = () => {
 
       <p>All artist information and images are taken from <a href="https://www.artsy.net/">Artsy</a>. Artist biographies are taken from <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> and sourced on page.</p>
 
-      <p>This is a first iteration of a larger idea that will hopefully grow to be more interactive for users. 💖</p>
+      <p>This is a first iteration of a larger idea that will hopefully grow to be more interactive for users.</p>
     </div>
   );
 }

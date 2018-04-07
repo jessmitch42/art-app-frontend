@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class ArtistSelect extends Component {
+
   render() {
     return (
       <select className="artist-select">
