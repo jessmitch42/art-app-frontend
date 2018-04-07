@@ -12,7 +12,6 @@ export default function manageGlobalState(state = {loading: false, currentArtist
         loading: false
       };
     case 'SET_CURRENT_ARTIST':
-    console.log(action)
       return {
         ...state,
         currentArtistId: action.currentArtistId

@@ -17,6 +17,8 @@ import AllArtistsContainer from './views/allArtistsContainer';
 import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
 import About from './components/about';
 import Artwork from './components/artwork';
+import NoMatch from './components/noMatch';
+
 
 
 class App extends Component {
@@ -38,7 +40,8 @@ class App extends Component {
             <Route
               exact path="/"
               render={ () =><AllArtistsContainer
-                artists={artistsList} />} />
+                artists={artistsList}
+                actions={this.props.actions} />} />
 
             <Route
               exact path="/about"
@@ -57,7 +60,8 @@ class App extends Component {
                   currentArtistArtwork={currentArtistArtwork}
                   artistId={currentArtistId}/>} />
 
-
+            <Route
+              component={NoMatch} />
 
           </Switch>
         </div>
