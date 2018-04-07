@@ -35,7 +35,7 @@ class AllArtistsContainer extends Component {
 
           <FlipMove
             staggerDelayBy={130}>
-            {this.props.artists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.globalActions}/>)}
+            {this.props.artists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)}
           </FlipMove>
         </div>
       </div>

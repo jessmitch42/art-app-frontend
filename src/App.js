@@ -9,8 +9,7 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from './actions/artActions';
-import * as globalActions from './actions/appActions';
+import * as actions from './actions/actions';
 
 
 import Header from './components/header';
@@ -44,7 +43,7 @@ class App extends Component {
             <Route exact path="/artists" render={()=>
               <AllArtistsContainer
               artists={artistsList}
-              globalActions={this.props.globalActions}/>} />
+              actions={this.props.actions}/>} />
 
             <Route path={`/artists/:artistId/artworks`} render={()=><ConnectedShowArtworksContainer currentArtistArtwork={currentArtistArtwork} artistId={currentArtistId}/>} />
 
@@ -69,7 +68,6 @@ function mapDispatchToProps(dispatch) {
   console.log("in App mapDispatchToProps")
   return {
     actions: bindActionCreators(actions, dispatch),
-    globalActions: bindActionCreators(globalActions, dispatch)
   };
 }
 

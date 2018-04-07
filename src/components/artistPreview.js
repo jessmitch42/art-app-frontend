@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import * as actions from '../actions/appActions';
+import * as actions from '../actions/actions';
 
 class ArtistPreview extends Component {
   // this is a react component instead of a stateless functional component because the plugin "flip-move" that does the artists_container animation requires a react components as children
