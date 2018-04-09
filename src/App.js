@@ -15,7 +15,6 @@ import * as actions from './actions/actions';
 import Header from './components/header';
 import AllArtistsContainer from './views/allArtistsContainer';
 import About from './components/about';
-import Artwork from './components/artwork';
 import Artworks from './views/showArtworksContainer';
 
 import NoMatch from './components/noMatch';
@@ -31,7 +30,7 @@ class App extends Component {
   }
 
   render() {
-    const { artistsList, currentArtistArtwork } = this.props; // destructuring data
+
     return (
       <Router>
         <div>

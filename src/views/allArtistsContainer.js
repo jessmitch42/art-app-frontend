@@ -19,15 +19,15 @@ class AllArtistsContainer extends Component {
     let artists;
 
     if (e.target.value === "ascending") {
-      let artists = this.sortAscending(this.props.artistsList);
+      artists = this.sortAscending(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
     else if (e.target.value === "age") {
-      let artists = this.sortAge(this.props.artistsList);
+      artists = this.sortAge(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
     else if (e.target.value === "random") {
-      let artists = this.sortRandom(this.props.artistsList);
+      artists = this.sortRandom(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
   }

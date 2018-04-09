@@ -21,13 +21,6 @@ export function fetchArtworks(artistId) {
       .catch(err => console.log(err))
   };
 }
-// 
-// export const setCurrentArtist = (id) => {
-//   return {
-//     type: 'SET_CURRENT_ARTIST',
-//     currentArtistId: id
-//   };
-// }
 
 export const loading = () => {
   return {
