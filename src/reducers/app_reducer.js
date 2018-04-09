@@ -11,11 +11,11 @@ export default function manageGlobalState(state = {loading: false, currentArtist
         ...state,
         loading: false
       };
-    case 'SET_CURRENT_ARTIST':
-      return {
-        ...state,
-        currentArtistId: action.currentArtistId
-      }
+    // case 'SET_CURRENT_ARTIST':
+    //   return {
+    //     ...state,
+    //     currentArtistId: action.currentArtistId
+    //   }
     default:
       return state;
 

@@ -14,9 +14,11 @@ import * as actions from './actions/actions';
 
 import Header from './components/header';
 import AllArtistsContainer from './views/allArtistsContainer';
-import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
+// import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
 import About from './components/about';
 import Artwork from './components/artwork';
+import Artworks from './views/showArtworksContainer';
+
 import NoMatch from './components/noMatch';
 
 
@@ -54,11 +56,8 @@ class App extends Component {
                   artists={artistsList}
                   actions={this.props.actions}/>} />
 
-            <Route
-              path={`/artists/:artistId/artworks`}
-              render={ () => <ConnectedShowArtworksContainer
-                  currentArtistArtwork={currentArtistArtwork}
-                  artistId={currentArtistId}/>} />
+
+            <Route path={`/artists/:artistId/artworks`} render={ (routeProps) => <Artworks routeProps={routeProps} props={this.props} />} />
 
             <Route
               component={NoMatch} />
