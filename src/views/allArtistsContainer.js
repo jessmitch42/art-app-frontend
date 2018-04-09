@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ArtistPreview from '../components/artistPreview';
-import Loading from '../components/loading';
 
 import FlipMove from 'react-flip-move';
 var shuffle = require('shuffle-array');
