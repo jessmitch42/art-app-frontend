@@ -4,16 +4,16 @@ import ArtistPageBio from './artistPageBio';
 
 const ArtistCompleteInfo = (props) => {
   // TODO: add state persistance for artist info; the state clears if the page reloads currently, making the below conditions necessary
-
-  const bio = props.artist ? props.artist.bio : "";
-  const sources = props.artist ? `sources: ${props.artist.sources}` : "";
-  console.log(props)
-  const formattedName = props.artist ? `${props.artist.first_name.toUpperCase()} ${props.artist.last_name.toUpperCase()}` : "";
+  // TODO: is there a better way to set var's than all these conditions? tbd
+  
+  const bio = props.artist.bio ? props.artist.bio : "";
+  const sources = props.artist.sources ? `sources: ${props.artist.sources}` : "";
+  const formattedName = props.artist.first_name ? `${props.artist.first_name.toUpperCase()} ${props.artist.last_name.toUpperCase()}` : "";
 
   const dates = setLifeDates(props.artist) ;
 
   function setLifeDates(artist) {
-    if (!artist) return;
+    if (!artist.birth_year) return;
     else if (!artist.death_year) {
       return `${artist.birth_year} | ${artist.nationality}`
     }
