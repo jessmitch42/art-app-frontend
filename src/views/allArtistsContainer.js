@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ArtistPreview from '../components/artistPreview';
+import Loading from '../components/loading';
+
 import FlipMove from 'react-flip-move';
 var shuffle = require('shuffle-array');
+
 
 class AllArtistsContainer extends Component {
   constructor(props) {
@@ -17,15 +20,15 @@ class AllArtistsContainer extends Component {
     let artists;
 
     if (e.target.value === "ascending") {
-      let artists = this.sortAscending(this.props.artists);
+      let artists = this.sortAscending(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
     else if (e.target.value === "age") {
-      let artists = this.sortAge(this.props.artists);
+      let artists = this.sortAge(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
     else if (e.target.value === "random") {
-      let artists = this.sortRandom(this.props.artists);
+      let artists = this.sortRandom(this.props.artistsList);
       this.setState({sortedArtists: artists});
     }
   }
@@ -44,15 +47,15 @@ class AllArtistsContainer extends Component {
 
 
   render() {
-    const { artists } = this.props;
+    const { artistsList } = this.props;
+
     let artistComponents;
     if (this.state.sortedArtists.length) {
       artistComponents = this.state.sortedArtists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
     }
-    else {
-      artistComponents = artists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
+    else if (artistsList.length) {
+      artistComponents = artistsList.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
     }
-
 
     return (
       <div>
@@ -65,10 +68,11 @@ class AllArtistsContainer extends Component {
           <option value="random">Random</option>
         </select>
 
-          <FlipMove
-            staggerDelayBy={130}>
-            {artistComponents}
-          </FlipMove>
+        <FlipMove
+          staggerDelayBy={130}>
+          {artistComponents}
+        </FlipMove>
+
         </div>
       </div>
     );

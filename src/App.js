@@ -14,7 +14,6 @@ import * as actions from './actions/actions';
 
 import Header from './components/header';
 import AllArtistsContainer from './views/allArtistsContainer';
-// import { ConnectedShowArtworksContainer } from './views/showArtworksContainer';
 import About from './components/about';
 import Artwork from './components/artwork';
 import Artworks from './views/showArtworksContainer';
@@ -32,7 +31,7 @@ class App extends Component {
   }
 
   render() {
-    const { artistsList, currentArtistArtwork, currentArtistId } = this.props; // destructuring data
+    const { artistsList, currentArtistArtwork } = this.props; // destructuring data
     return (
       <Router>
         <div>
@@ -41,26 +40,28 @@ class App extends Component {
 
             <Route
               exact path="/"
-              render={ () =><AllArtistsContainer
-                artists={artistsList}
-                actions={this.props.actions} />} />
+              render={ () =><AllArtistsContainer {...this.props} />}
+                />
 
             <Route
               exact path="/about"
-              component={About} />
+              component={About}
+              />
 
             <Route
               exact path="/artists"
-              render={ () =>
-                <AllArtistsContainer
-                  artists={artistsList}
-                  actions={this.props.actions}/>} />
+              render={ () => <AllArtistsContainer{...this.props}/>}
+              />
 
 
-            <Route path={`/artists/:artistId/artworks`} render={ (routeProps) => <Artworks {...routeProps} {...this.props} />} />
+            <Route path={`/artists/:artistId/artworks`} render={
+                (routeProps) => <Artworks {...routeProps} {...this.props} />
+              }
+              />
 
             <Route
-              component={NoMatch} />
+              component={NoMatch}
+              />
 
           </Switch>
         </div>
@@ -74,8 +75,7 @@ const mapStateToProps = (state) => {
   return {
     artistsList: state.artists,
     currentArtistArtwork: state.artworks,
-    loading: state.global.loading,
-    currentArtistId: state.global.currentArtistId
+    loading: state.global.loading
   };
 };
 
