@@ -5,9 +5,14 @@ class Artwork extends Component {
   render() {
     const { id, img, name, year_completed, materials } = this.props.artwork;
     return (
-      <div id={`artwork-${id}`} className="artwork__container avoid-break">
+      <div
+        id={`artwork-${id}`}
+        className="artwork__container avoid-break">
 
-        <img className="artwork-img" src={`http://localhost:4000/img/${img}.png`} alt={`${name}`}/>
+        <img
+          className="artwork-img"
+          src={`http://localhost:4000/img/${img}.png`}
+          alt={`${name}`}/>
 
         <div className="artwork__name">{`${name} |  ${year_completed}`}</div>
         <div className="artist__materials">{materials}</div>
