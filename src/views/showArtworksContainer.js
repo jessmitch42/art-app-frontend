@@ -8,74 +8,32 @@ import ArtworkFlipContainer from '../components/artworkFlipContainer'
 import ArtistCompleteInfo from '../components/artistCompleteInfo';
 
 
-const Artworks = (appProps) => {
+class Artworks extends Component {
+  componentDidMount() {
+    console.log("in Artowrk componentDidMount")
 
-  console.log(appProps)
-  // const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <ArtworkFlipContainer artwork={a} key={a.id}/>);
-  // <FlipMove
-  //   staggerDelayBy={100}>
-  //   {currentArtistArtworks}
-  // </FlipMove>
+    this.props.actions.fetchArtworks(this.props.match.params.artistId);
+  }
 
-  const filterArtists = appProps.props.artistsList.filter(a => a.id == appProps.routeProps.match.params.artistId);
-  const currentArtist = filterArtists[0] ? filterArtists[0] : {};
-  return (
-      <div className="artwork-container wrapper">
+  render() {
+    console.log(this.props.match.params.artistId)
 
-      <ArtistCompleteInfo artist={currentArtist}/>
+    const filterArtists = this.props.artistsList.filter(a => a.id == this.props.match.params.artistId);
+    const currentArtist = filterArtists[0] ? filterArtists[0] : {};
+    const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <ArtworkFlipContainer artwork={a} key={a.id}/>);
 
+    return (
+        <div className="artwork-container wrapper">
+          <ArtistCompleteInfo artist={currentArtist}/>
+          <FlipMove
+            staggerDelayBy={100}>
+            {currentArtistArtworks}
+          </FlipMove>
+        </div>
 
-
-
-      </div>
-
-  )
+    )
+  }
 };
 
+
 export default Artworks;
-// class ShowArtworksContainer extends Component {
-//   componentDidMount() {
-//     console.log("in Artowrk componentDidMount")
-//
-//     this.props.actions.fetchArtworks(this.props.artistId);
-//   }
-//
-//   render() {
-//     const currentArtistArtworks = this.props.currentArtistArtwork.map(a => <ArtworkFlipContainer artwork={a} key={a.id}/>);
-//     return (
-//         <div className="artwork-container wrapper">
-//
-//           <ArtistCompleteInfo artist={this.props.currentArtist}/>
-//
-//           <FlipMove
-//             staggerDelayBy={100}>
-//             {currentArtistArtworks}
-//           </FlipMove>
-//
-//         </div>
-//
-//     )
-//   }
-// }
-//
-// const mapStateToProps = (state) => {
-//   console.log("in App mapStateToProps")
-//   return {
-//     currentArtistArtwork: state.artworks,
-//     currentArtist: findCurrentArtistInState(state)
-//   };
-// };
-//
-// function findCurrentArtistInState(state) {
-//   return state.artists.filter(a => a.id === state.global.currentArtistId)[0]
-// }
-//
-// function mapDispatchToProps(dispatch) {
-//   console.log("in App mapDispatchToProps")
-//   return {
-//     actions: bindActionCreators(actions, dispatch)
-//   };
-// }
-//
-//
-// export const ConnectedShowArtworksContainer = connect(mapStateToProps, mapDispatchToProps)(ShowArtworksContainer);

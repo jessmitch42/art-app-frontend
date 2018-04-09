@@ -57,7 +57,7 @@ class App extends Component {
                   actions={this.props.actions}/>} />
 
 
-            <Route path={`/artists/:artistId/artworks`} render={ (routeProps) => <Artworks routeProps={routeProps} props={this.props} />} />
+            <Route path={`/artists/:artistId/artworks`} render={ (routeProps) => <Artworks {...routeProps} {...this.props} />} />
 
             <Route
               component={NoMatch} />

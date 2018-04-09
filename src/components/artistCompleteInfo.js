@@ -4,9 +4,10 @@ import ArtistPageBio from './artistPageBio';
 
 const ArtistCompleteInfo = (props) => {
   // TODO: add state persistance for artist info; the state clears if the page reloads currently, making the below conditions necessary
-  console.log(props)
+
   const bio = props.artist ? props.artist.bio : "";
   const sources = props.artist ? `sources: ${props.artist.sources}` : "";
+  console.log(props)
   const formattedName = props.artist ? `${props.artist.first_name.toUpperCase()} ${props.artist.last_name.toUpperCase()}` : "";
 
   const dates = setLifeDates(props.artist) ;
