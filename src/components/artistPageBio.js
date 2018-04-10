@@ -1,10 +1,10 @@
 import React from "react";
 
-const ArtistPageBio = (props) => (
+const ArtistPageBio = ({ dates, bio, sources }) => (
   <div>
-    <div className="artist-complete__dates">{props.dates}</div>
-    <div className="artist-complete__bio">{props.bio}</div>
-    <div className="artist-complete__sources">{props.sources}</div>
+    <div className="artist-complete__dates">{dates}</div>
+    <div className="artist-complete__bio">{bio}</div>
+    <div className="artist-complete__sources">{sources}</div>
   </div>
 );
 
