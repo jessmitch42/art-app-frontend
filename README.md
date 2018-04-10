@@ -10,7 +10,7 @@ CURA♀ED provides a curated list of female contemporary artists you may or may 
 
 <img src="./public/images/curated_artists_view.png" alt="Welcome Page Screenshot">
 
-<img src="/public/images/curated_artworks_view.png" alt="Welcome Page Screenshot">
+<img src="./public/images/curated_artworks_view.png" alt="Artworks Page Screenshot">
 
 ## Next Steps
 Ideally, I'd like to update this app to have user authentication that allows individual users to interact with the app more, such as liking paintings, suggesting new artists, or uploading artworks/artists themselves. This version should be considered a basic MVP.
