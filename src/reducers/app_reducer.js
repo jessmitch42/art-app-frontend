@@ -1,16 +1,11 @@
 export default function manageGlobalState(state = { loading: false }, action) {
   switch (action.type) {
 
-    case 'LOADING_DATA':
-      return {
-        ...state,
-        loading: true
-      };
-    case 'STOP_LOADING_DATA':
-      return {
-        ...state,
-        loading: false
-      };
+    case 'FETCHING_DATA':
+      return { loading: true };
+
+    case 'DONE_FETCHING_DATA':
+      return { loading: false };
 
     default:
       return state;
