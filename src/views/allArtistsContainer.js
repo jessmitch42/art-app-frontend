@@ -57,7 +57,7 @@ class AllArtistsContainer extends Component {
       <div>
         <div className="artists-container wrapper">
 
-        <ArtistSortingSelect onChange={this.handleSelection.bind(this)}/>
+        <ArtistSortingSelect onChange={this.handleSelection}/>
 
         <FlipMove
           staggerDelayBy={130}>

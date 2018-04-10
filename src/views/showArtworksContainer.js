@@ -30,7 +30,7 @@ class Artworks extends Component {
             staggerDelayBy={100}>
             {currentArtistArtworks}
           </FlipMove>
-          
+
         </div>
 
     )

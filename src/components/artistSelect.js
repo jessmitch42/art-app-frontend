@@ -4,7 +4,7 @@ const ArtistSortingSelect = (props) => {
     return (
       <select
         className="artist-select"
-        onChange={props.onChange.bind(this)}>
+        onChange={props.onChange}>
 
         <option selected>Sort Artists</option>
         <option value="ascending">A-Z</option>

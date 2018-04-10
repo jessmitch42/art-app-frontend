@@ -49,7 +49,7 @@ class App extends Component {
 
             <Route
               exact path="/artists"
-              render={ () => <AllArtistsContainer{...this.props}/>}
+              render={ () => <AllArtistsContainer {...this.props}/>}
               />
 
 
