@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import ArtistPreview from '../components/artistPreview';
+import ArtistSelect from '../components/artistSelect'
 
 import FlipMove from 'react-flip-move';
 var shuffle = require('shuffle-array');
 
 
 class AllArtistsContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sortedArtists: []
-    };
-
-    this.handleSelection = this.handleSelection.bind(this);
-  }
+  state = {
+    sortedArtists: []
+  };
 
   handleSelection = (e) => {
     let artists;
@@ -60,12 +56,7 @@ class AllArtistsContainer extends Component {
       <div>
         <div className="artists-container wrapper">
 
-        <select className="artist-select" onChange={this.handleSelection}>
-          <option selected>Sort Artists</option>
-          <option value="ascending">A-Z</option>
-          <option value="age">Youngest-Oldest</option>
-          <option value="random">Random</option>
-        </select>
+        <ArtistSelect onChange={this.handleSelection.bind(this)}/>
 
         <FlipMove
           staggerDelayBy={130}>
