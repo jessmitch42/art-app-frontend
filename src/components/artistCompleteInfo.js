@@ -12,8 +12,11 @@ const ArtistCompleteInfo = (props) => {
 
   return (
       <div className="artist-complete__container">
+
         <ArtistPageHeader name={formattedName}/>
+
         <ArtistPageBio dates={datesWithNationality} bio={bio} sources={formattedSources}/>
+        
       </div>
   );
 }
