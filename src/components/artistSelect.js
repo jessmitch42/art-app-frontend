@@ -6,7 +6,7 @@ const ArtistSortingSelect = (props) => {
         className="artist-select"
         onChange={props.onChange}>
 
-        <option selected>Sort Artists</option>
+        <option defaultValue="">Sort Artists</option>
         <option value="ascending">A-Z</option>
         <option value="age">Youngest-Oldest</option>
         <option value="random">Random</option>
