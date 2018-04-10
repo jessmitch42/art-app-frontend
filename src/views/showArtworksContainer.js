@@ -23,11 +23,14 @@ class Artworks extends Component {
 
     return (
         <div className="artwork-container wrapper">
+
           <ArtistCompleteInfo artist={currentArtist}/>
+
           <FlipMove
             staggerDelayBy={100}>
             {currentArtistArtworks}
           </FlipMove>
+          
         </div>
 
     )

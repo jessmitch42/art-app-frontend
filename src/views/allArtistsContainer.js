@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArtistPreview from '../components/artistPreview';
-import ArtistSelect from '../components/artistSelect'
+import ArtistSortingSelect from '../components/artistSelect'
 
 import FlipMove from 'react-flip-move';
 var shuffle = require('shuffle-array');
@@ -45,6 +45,7 @@ class AllArtistsContainer extends Component {
     const { artistsList } = this.props;
 
     let artistComponents;
+
     if (this.state.sortedArtists.length) {
       artistComponents = this.state.sortedArtists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
     }
@@ -56,7 +57,7 @@ class AllArtistsContainer extends Component {
       <div>
         <div className="artists-container wrapper">
 
-        <ArtistSelect onChange={this.handleSelection.bind(this)}/>
+        <ArtistSortingSelect onChange={this.handleSelection.bind(this)}/>
 
         <FlipMove
           staggerDelayBy={130}>

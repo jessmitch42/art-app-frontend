@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../actions/actions';
 
-class ArtistSortingSelect extends Component {
-  render() {
+const ArtistSortingSelect = (props) => {
     return (
       <select
         className="artist-select"
-        onChange={this.props.onChange.bind(this)}>
+        onChange={props.onChange.bind(this)}>
 
         <option selected>Sort Artists</option>
         <option value="ascending">A-Z</option>
@@ -16,7 +13,6 @@ class ArtistSortingSelect extends Component {
 
       </select>
     )
-  }
 }
 
 export default ArtistSortingSelect;
