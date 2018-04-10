@@ -7,16 +7,15 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './actions/actions';
 
-
 import Header from './components/header';
 import AllArtistsContainer from './views/allArtistsContainer';
 import About from './components/about';
-import Artworks from './views/showArtworksContainer';
-
+import ShowArtworksContainer from './views/showArtworksContainer';
 import NoMatch from './components/noMatch';
 
 
@@ -34,7 +33,9 @@ class App extends Component {
     return (
       <Router>
         <div>
+
           <Header />
+
           <Switch>
 
             <Route
@@ -54,7 +55,7 @@ class App extends Component {
 
 
             <Route path={`/artists/:artistId/artworks`} render={
-                (routeProps) => <Artworks {...routeProps} {...this.props} />
+                (routeProps) => <ShowArtworksContainer {...routeProps} {...this.props} />
               }
               />
 
@@ -63,6 +64,7 @@ class App extends Component {
               />
 
           </Switch>
+          
         </div>
       </Router>
     )

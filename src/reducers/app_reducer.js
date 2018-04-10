@@ -1,4 +1,4 @@
-export default function manageGlobalState(state = {loading: false, currentArtistId: false}, action) {
+export default function manageGlobalState(state = { loading: false }, action) {
   switch (action.type) {
 
     case 'LOADING_DATA':

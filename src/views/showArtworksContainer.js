@@ -5,7 +5,7 @@ import ArtworkFlipContainer from '../components/artworkFlipContainer'
 import ArtistCompleteInfo from '../components/artistCompleteInfo';
 
 
-class Artworks extends Component {
+class ShowArtworksContainer extends Component {
   componentDidMount() {
     console.log("in Artwork componentDidMount")
 
@@ -38,4 +38,4 @@ class Artworks extends Component {
 };
 
 
-export default Artworks;
+export default ShowArtworksContainer;
