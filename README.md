@@ -8,9 +8,9 @@ BTW: This project was bootstrapped with [Create React App](https://github.com/fa
 ## What is it?
 CURA♀ED provides a curated list of female contemporary artists you may or may not know. This repo is just the views.
 
-<img src="/art-app/public/images/curated_artists_view.png" alt="Welcome Page Screenshot">
+<img src="./public/images/curated_artists_view.png" alt="Welcome Page Screenshot">
 
-<img src="/art-app/public/images/curated_artworks_view.png" alt="Welcome Page Screenshot">
+<img src="/public/images/curated_artworks_view.png" alt="Welcome Page Screenshot">
 
 ## Next Steps
 Ideally, I'd like to update this app to have user authentication that allows individual users to interact with the app more, such as liking paintings, suggesting new artists, or uploading artworks/artists themselves. This version should be considered a basic MVP.
@@ -19,4 +19,4 @@ Ideally, I'd like to update this app to have user authentication that allows ind
 Please feel welcome to create an issue or open a pull request with any bugs/suggestions. Keep in mind this is a small personal project, though..
 
 ## License
-This app is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). 
+This app is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
