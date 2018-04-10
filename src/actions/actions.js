@@ -1,8 +1,10 @@
+const BASE_URL = 'http://localhost:4000';
+
 export function fetchArtists() {
   console.log("in fetchArtists action")
   return (dispatch) => {
     dispatch({ type: 'LOADING_DATA' }); //not current using this in components
-    return fetch('http://localhost:4000/artists')
+    return fetch(`${BASE_URL}/artists`)
       .then(response => response.json())
       .then(res => dispatch({ type: 'ADD_ARTISTS', artists: res }))
       .then(() => dispatch({ type: 'DONE_LOADING_DATA'}))
@@ -14,7 +16,7 @@ export function fetchArtworks(artistId) {
   console.log("in fetchArtworks action")
   return (dispatch) => {
     dispatch({ type: 'LOADING_DATA' });
-    return fetch('http://localhost:4000/artists/'+artistId+'/artworks')
+    return fetch(`${BASE_URL}/artists/${artistId}/artworks`)
       .then(response => response.json())
       .then(res => dispatch({ type: 'ADD_ARTWORKS', artworks: res }))
       .then(() => dispatch({ type: 'DONE_LOADING_DATA'}))
