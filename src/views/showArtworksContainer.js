@@ -7,8 +7,6 @@ import ArtistCompleteInfo from '../components/artistCompleteInfo';
 
 class ShowArtworksContainer extends Component {
   componentDidMount() {
-    console.log("in Artwork componentDidMount")
-
     this.props.actions.fetchArtworks(this.props.match.params.artistId);
   }
 

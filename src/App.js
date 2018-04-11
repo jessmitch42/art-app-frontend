@@ -22,7 +22,6 @@ import NoMatch from './components/noMatch';
 
 class App extends Component {
   componentDidMount() {
-    console.log("in App componentDidMount")
     if (!this.props.artistsList.length) {
       this.props.actions.fetchArtists();
     }
@@ -64,7 +63,7 @@ class App extends Component {
               />
 
           </Switch>
-          
+
         </div>
       </Router>
     )
@@ -72,7 +71,6 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("in App mapStateToProps")
   return {
     artistsList: state.artists,
     currentArtistArtwork: state.artworks,
@@ -81,7 +79,6 @@ const mapStateToProps = (state) => {
 };
 
 function mapDispatchToProps(dispatch) {
-  console.log("in App mapDispatchToProps")
   return {
     actions: bindActionCreators(actions, dispatch),
   };

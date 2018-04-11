@@ -42,15 +42,15 @@ class AllArtistsContainer extends Component {
 
 
   render() {
-    const { artistsList } = this.props;
+    const { artistsList, actions } = this.props;
 
     let artistComponents;
 
     if (this.state.sortedArtists.length) {
-      artistComponents = this.state.sortedArtists.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
+      artistComponents = this.state.sortedArtists.map(a => <ArtistPreview key={a.id} artist={a} actions={actions}/>)
     }
     else if (artistsList.length) {
-      artistComponents = artistsList.map(a => <ArtistPreview key={a.id} artist={a} actions={this.props.actions}/>)
+      artistComponents = artistsList.map(a => <ArtistPreview key={a.id} artist={a} actions={actions}/>)
     }
 
     return (

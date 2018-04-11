@@ -1,8 +1,0 @@
-todo:
-- nomatch component in router Switch for 404 msg
-- about page
-    DONE
-- error handling for fetches
-
-
-- stateless functional components for containers using flipmove

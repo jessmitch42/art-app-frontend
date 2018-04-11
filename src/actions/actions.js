@@ -1,7 +1,6 @@
 const BASE_URL = 'http://localhost:4000';
 
 export function fetchArtists() {
-  console.log("in fetchArtists action")
   return (dispatch) => {
     dispatch({ type: 'FETCHING_DATA' }); //not current using this in components
     return fetch(`${BASE_URL}/artists`)
@@ -13,7 +12,6 @@ export function fetchArtists() {
 }
 
 export function fetchArtworks(artistId) {
-  console.log("in fetchArtworks action")
   return (dispatch) => {
     dispatch({ type: 'FETCHING_DATA' });
     return fetch(`${BASE_URL}/artists/${artistId}/artworks`)
