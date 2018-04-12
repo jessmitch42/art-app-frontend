@@ -11,7 +11,7 @@ import {
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from './actions/actions';
+import * as actions from './actions/actionCreators';
 
 import AppHeader from './components/appHeader';
 import AllArtistsContainer from './views/allArtistsContainer';
