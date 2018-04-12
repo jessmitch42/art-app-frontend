@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+  // TODO: make h1 a link
+  
   return (
       <header className="App-header">
 

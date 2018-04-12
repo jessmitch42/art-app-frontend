@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArtistPreview from '../components/artistPreview';
+import ArtistCard from '../components/artistCard';
 import ArtistSortingSelect from '../components/artistSelect'
 
 import FlipMove from 'react-flip-move';
@@ -47,10 +47,10 @@ class AllArtistsContainer extends Component {
     let artistComponents;
 
     if (this.state.sortedArtists.length) {
-      artistComponents = this.state.sortedArtists.map(a => <ArtistPreview key={a.id} artist={a} actions={actions}/>)
+      artistComponents = this.state.sortedArtists.map(a => <ArtistCard key={a.id} artist={a} actions={actions}/>)
     }
     else if (artistsList.length) {
-      artistComponents = artistsList.map(a => <ArtistPreview key={a.id} artist={a} actions={actions}/>)
+      artistComponents = artistsList.map(a => <ArtistCard key={a.id} artist={a} actions={actions}/>)
     }
 
     return (

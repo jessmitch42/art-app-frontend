@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Artwork = ({ img, name, year_completed, materials }) => {
+const ArtworkCard = ({ img, name, year_completed, materials }) => {
   return (
     <div>
       <img
@@ -16,4 +16,4 @@ const Artwork = ({ img, name, year_completed, materials }) => {
 
 
 
-export default Artwork;
+export default ArtworkCard;

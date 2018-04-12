@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Artwork from './artwork'
+import ArtworkCard from './artworkCard'
 
 
 class ArtworkFlipContainer extends Component {
@@ -11,7 +11,7 @@ class ArtworkFlipContainer extends Component {
         id={`artwork-${id}`}
         className="artwork__container avoid-break">
 
-        <Artwork img={img} name={name} year_completed={year_completed} materials={materials}/>
+        <ArtworkCard img={img} name={name} year_completed={year_completed} materials={materials}/>
 
       </div>
     )
