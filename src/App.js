@@ -5,7 +5,8 @@ import './App-responsive.css';
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 
 import { connect } from 'react-redux';
@@ -37,10 +38,7 @@ class App extends Component {
 
           <Switch>
 
-            <Route
-              exact path="/"
-              render={ () =><AllArtistsContainer {...this.props} />}
-                />
+            <Route exact path="/" render={() => (<Redirect to="/artists" />)} />
 
             <Route
               exact path="/about"
