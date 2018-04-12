@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Artwork = ({ img, name, year_completed, materials }) => {
+  console.log(name)
   return (
     <div>
       <img
