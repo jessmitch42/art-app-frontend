@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const AppHeader = () => {
   // TODO: make h1 a link
-  
+
   return (
       <header className="App-header">
 
@@ -19,4 +19,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default AppHeader;

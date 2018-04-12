@@ -12,6 +12,8 @@ class ShowArtworksContainer extends Component {
     actions.fetchArtworks(match.params.artistId);
   }
 
+  // TODO: error handling is artist id doesn't match artists in state
+
   render() {
     const { artistsList, match, currentArtistArtwork } = this.props;
     const filterArtists = artistsList.filter(a => a.id == match.params.artistId);

@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './actions/actions';
 
-import Header from './components/header';
+import AppHeader from './components/appHeader';
 import AllArtistsContainer from './views/allArtistsContainer';
 import About from './components/about';
 import ShowArtworksContainer from './views/showArtworksContainer';
@@ -34,7 +34,7 @@ class App extends Component {
       <Router>
         <div>
 
-          <Header />
+          <AppHeader />
 
           <Switch>
 

@@ -11,6 +11,9 @@ class AllArtistsContainer extends Component {
     sortedArtists: []
   };
 
+  // TODO: filter artists with search bar
+  // TODO: display artist bio on hover
+
   handleSelection = (e) => {
     let artists;
 
