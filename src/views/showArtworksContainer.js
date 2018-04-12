@@ -7,18 +7,18 @@ import ArtistCompleteInfo from '../components/artistCompleteInfo';
 
 class ShowArtworksContainer extends Component {
   componentDidMount() {
-    const { actions, match } = this.props;
+    const { actions, match, currentArtistArtwork } = this.props;
 
     actions.fetchArtworks(match.params.artistId);
   }
 
   render() {
-    const filterArtists = this.props.artistsList.filter(a => a.id == this.props.match.params.artistId);
+    const { artistsList, match, currentArtistArtwork } = this.props;
+    const filterArtists = artistsList.filter(a => a.id == match.params.artistId);
 
     const currentArtist = filterArtists[0] ? filterArtists[0] : {};
 
-    const currentArtistArtworks =
-      this.props.currentArtistArtwork.map(a =>
+    const currentArtworksMapped = currentArtistArtwork.map(a =>
         <ArtworkFlipContainer artwork={a} key={a.id}/>);
 
     return (
@@ -28,7 +28,7 @@ class ShowArtworksContainer extends Component {
 
           <FlipMove
             staggerDelayBy={100}>
-            {currentArtistArtworks}
+            {currentArtworksMapped}
           </FlipMove>
 
         </div>
