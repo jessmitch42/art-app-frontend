@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlipMove from 'react-flip-move';
+import  { Redirect } from 'react-router-dom';
 
 import ArtworkFlipContainer from '../components/artworkFlipContainer'
 import ArtistCompleteInfo from '../components/artistCompleteInfo';
@@ -18,7 +19,7 @@ class ShowArtworksContainer extends Component {
     const { artistsList, match, currentArtistArtwork } = this.props;
     const filterArtists = artistsList.filter(a => a.id == match.params.artistId);
 
-    const currentArtist = filterArtists[0] ? filterArtists[0] : {};
+    const currentArtist = filterArtists[0] ? filterArtists[0] : false;
 
     const currentArtworksMapped = currentArtistArtwork.map(a =>
         <ArtworkFlipContainer artwork={a} key={a.id}/>);
@@ -26,7 +27,10 @@ class ShowArtworksContainer extends Component {
     return (
         <div className="artwork-container wrapper">
 
-          <ArtistCompleteInfo artist={currentArtist}/>
+          { currentArtist ?
+            <ArtistCompleteInfo artist={currentArtist}/> :
+            <Redirect to="/artists" />
+          }
 
           <FlipMove
             staggerDelayBy={100}>

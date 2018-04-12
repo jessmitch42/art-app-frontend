@@ -38,7 +38,10 @@ class App extends Component {
 
           <Switch>
 
-            <Route exact path="/" render={() => (<Redirect to="/artists" />)} />
+            <Route
+              exact path="/"
+              render={() => (<Redirect to="/artists" />)}
+              />
 
             <Route
               exact path="/about"
