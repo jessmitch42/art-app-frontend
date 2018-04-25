@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import ArtistCompleteInfo from './artistCompleteInfo';
+import ArtistPageHeader from './artistPageHeader';
 
 class ArtistCard extends Component {
   // this is a react component instead of a stateless functional component because the plugin "flip-move" that is used in allArtistsContainer requires a react components as children to properly animate
@@ -14,6 +14,7 @@ class ArtistCard extends Component {
 
   render() {
     const { id, img, first_name, last_name } = this.props.artist;
+    const formattedName = `${first_name} ${last_name}`.toUpperCase();
 
     return (
       <div
@@ -24,19 +25,11 @@ class ArtistCard extends Component {
           onMouseOver={this.handleHover}
           onMouseOut={this.removeHover}
           to={`/artists/${id}/artworks`}>
-          {!this.state.hover ?
-            <img
-              className="artist-img"
-              src={`http://localhost:4000/img/${img}.png`}
-              alt="Artist Artwork Example"/> :
-            <ArtistCompleteInfo {...this.props} />}
-
-
+          <img
+            className="artist-img"
+            src={`http://localhost:4000/img/${img}.png`}
+            alt="Artist Artwork Example"/>
         </Link>
-
-
-
-        <div className="artist__name">{first_name.toUpperCase()} {last_name.toUpperCase()}</div>
 
       </div>
     );

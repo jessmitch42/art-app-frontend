@@ -88,16 +88,10 @@ a:hover {
 
 .artist__container:hover {
   opacity: .5;
+  color: black;
 }
 
-.avoid-break {
-  margin: 0;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari */
-  page-break-inside: avoid;           /* Theoretically FF 20+ */
-  break-inside: avoid-column;         /* IE 11 */
-  display:table;                      /* Actually FF 20+ */
-  margin-bottom: 10px;
-}
+
 
 /* ARTWORK CONTAINERS */
 
@@ -132,13 +126,13 @@ a:hover {
 
 /* ARTIST INFO (BIO, ETC) */
 
-.artist-complete__container {
+.artwork-container .artist-complete__container {
   border: 5px solid #DF029D;
   margin-bottom: 10px;
   padding: 0 20px;
 }
 
-.artist-complete__container div {
+.artwork-container .artist-complete__container div {
   margin-bottom: 10px;
 }
 
@@ -148,4 +142,13 @@ a:hover {
 
 .artist-complete__sources {
   word-wrap: break-word;
+}
+
+.artwork-container.avoid-break {
+  margin: 0;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari */
+  page-break-inside: avoid;           /* Theoretically FF 20+ */
+  break-inside: avoid-column;         /* IE 11 */
+  display:table;                      /* Actually FF 20+ */
+  margin-bottom: 10px;
 }
