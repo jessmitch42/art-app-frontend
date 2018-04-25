@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 
 class ArtistCard extends Component {
   // this is a react component instead of a stateless functional component because the plugin "flip-move" that is used in allArtistsContainer requires a react components as children to properly animate
+  state = {
+    hover: false
+  }
+
+  handleHover = () => {
+    this.setState({
+      hover: true
+    })
+  }
+
   render() {
     const { id, img, first_name, last_name } = this.props.artist;
 
