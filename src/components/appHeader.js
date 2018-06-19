@@ -9,11 +9,13 @@ const AppHeader = () => {
 
         <h1 className="App-title">CURA♀ED</h1>
 
-        <NavLink
-         exact to="/about">about</NavLink>
+        <div className="nav-container">
+          <NavLink
+          exact to="/about">about</NavLink>
 
-        <NavLink
-          exact to="/artists">artists</NavLink>
+          <NavLink
+            exact to="/artists">artists</NavLink>
+        </div>
 
       </header>
   );

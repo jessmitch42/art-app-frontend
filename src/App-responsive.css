@@ -21,10 +21,6 @@
   .App-header {
     height: 5rem;
   }
-
-  .App-header a {
-    font-size: 1rem;
-  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -34,6 +30,19 @@
 
   .App-header {
     height: 4rem;
+  }
+
+  .App-header .nav-container {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .App-header .nav-container a {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    padding: 10px 5px 5px;
+    font-size: 1rem;
   }
 }
 
@@ -75,7 +84,11 @@
     height: 2.5rem;
   }
 
-  .App-header a {
+  .App-header .nav-container {
+    padding: 15px 0;
+  }
+
+  .App-header .nav-container a {
     font-size: 0.7rem;
     padding: 5px;
   }

@@ -31,21 +31,37 @@ a:hover {
 /* HEADER */
 
 .App-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   background-color: #C32424;
   height: 7rem;
   color: white;
-  display: flex;
   padding-left: 4%;
 }
 
-.App-header a {
+.App-header .nav-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.App-header .nav-container a {
   align-self: flex-end;
   padding: 10px;
   font-family: 'Cutive Mono', monospace;
   font-size: 1.3rem;
 }
 
-.App-header a:hover {
+.App-header .nav-container a:hover {
   color: #8E024B;
 }
 
