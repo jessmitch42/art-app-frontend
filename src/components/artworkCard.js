@@ -5,7 +5,7 @@ const ArtworkCard = ({ img, name, year_completed, materials }) => {
     <div>
       <img
         className="artwork-img"
-        src={`http://localhost:4000/img/${img}.png`}
+        src={`https://curated-api.herokuapp.com/${img}.png`}
         alt={`${name}`}/>
 
       <div className="artwork__name">{`${name} |  ${year_completed}`}</div>
