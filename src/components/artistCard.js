@@ -27,7 +27,7 @@ class ArtistCard extends Component {
           to={`/artists/${id}/artworks`}>
           <img
             className="artist-img"
-            src={`http://localhost:4000/img/${img}.png`}
+            src={`https://curated-api.herokuapp.com/img/${img}.png`}
             alt="Artist Artwork Example"/>
         </Link>
 

@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = 'https://curated-api.herokuapp.com/';
 
 export function fetchArtists() {
   return (dispatch) => {
