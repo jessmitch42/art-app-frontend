@@ -44,6 +44,16 @@
     padding: 10px 5px 5px;
     font-size: 1rem;
   }
+
+  .artwork-container {
+    -webkit-column-count: 1;
+    -webkit-column-gap: 5px;
+    -moz-column-count: 1;
+    -moz-column-gap: 5px;
+    column-count: 1;
+    column-gap: 5px;
+    width: 88%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
