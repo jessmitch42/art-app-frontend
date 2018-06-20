@@ -134,6 +134,7 @@ a:hover {
 
 .about-container {
   color: #0f050c;
+  margin: auto;
 }
 
 .about-container span.about-page__quote {
