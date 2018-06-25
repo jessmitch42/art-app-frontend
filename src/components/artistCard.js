@@ -24,11 +24,15 @@ class ArtistCard extends Component {
         <Link
           onMouseOver={this.handleHover}
           onMouseOut={this.removeHover}
-          to={`/artists/${id}/artworks`}>
-          <img
-            className="artist-img"
-            src={`https://curated-api.herokuapp.com/img/${img}.png`}
-            alt="Artist Artwork Example"/>
+          to={`/artists/${id}/artworks`}
+          className="content">
+            <h3 
+              className="content-details fadeIn-left">{first_name} {last_name}</h3>
+
+            <img
+              className="artist-img"
+              src={`https://curated-api.herokuapp.com/img/${img}.png`}
+              alt="Artist Artwork Example"/>
         </Link>
 
       </div>
