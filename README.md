@@ -14,7 +14,7 @@ CURA♀ED provides a curated list of female contemporary artists you may or may 
 
 ## Usage
 
-Fork, clone, `npm install && nom start`. Making use you have the <a href="https://github.com/jessmitch42/art-app-backend">API</a> running locally as well and update your base url in /src/actions/actions.js (two spots).
+Fork, clone, `npm install && npm start`. Making use you have the <a href="https://github.com/jessmitch42/art-app-backend">API</a> running locally as well and update your base url in /src/actions/actions.js (two spots).
 
 <img src="./public/images/curated_artworks_view.png" alt="Artworks Page Screenshot">
 
