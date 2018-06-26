@@ -1,5 +1,7 @@
 ## CURA♀ED
 
+<a href="http://www.curatedart.ca/artists">Live Site</a>
+
 ## About
 This is a React/Redux frontend for this <a href="https://github.com/jessmitch42/art-app-backend">Rails</a> backend. It provides a preview page for a list of artists, as well as an artworks view for each individual artist. Artists can be sorted from the home page. I also used <a href="https://github.com/joshwcomeau/react-flip-move">React Flip Move</a> for animations and React Router for routing.
 
