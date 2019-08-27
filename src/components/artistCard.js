@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import ArtistPageHeader from './artistPageHeader';
 
 class ArtistCard extends Component {
-  // this is a react component instead of a stateless functional component because the plugin "flip-move" that is used in allArtistsContainer requires a react components as children to properly animate
+  /* this is a react component instead of a stateless 
+  functional component because the plugin "flip-move" 
+  that is used in allArtistsContainer requires a react 
+  components as children to properly animate */
   state = {
     hover: false
   }

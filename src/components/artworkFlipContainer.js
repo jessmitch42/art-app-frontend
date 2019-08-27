@@ -3,7 +3,10 @@ import ArtworkCard from './artworkCard'
 
 
 class ArtworkFlipContainer extends Component {
-  // this is a react component instead of a stateless functional component because the plugin "flip-move" requires react components as children to properly animate. It's essentially a wrapper.
+  /* this is a react component instead of a stateless 
+  functional component because the plugin "flip-move" 
+  requires react components as children to properly 
+  animate. */
 
   render() {
     const { id, img, name, year_completed, materials } = this.props.artwork;
