@@ -11,13 +11,13 @@ const ArtistCompleteInfo = (props) => {
   const datesWithNationality = `${dates} | ${nationality}`;
 
   return (
-      <div className="artist-complete__container">
+      <section className="artist-complete__container">
 
         <ArtistPageHeader name={formattedName}/>
 
         <ArtistPageBio dates={datesWithNationality} bio={bio} sources={formattedSources}/>
         
-      </div>
+      </section>
   );
 }
 

@@ -2,15 +2,17 @@ import React from 'react';
 
 const ArtworkCard = ({ img, name, year_completed, materials }) => {
   return (
-    <div>
+    <figure>
       <img
         className="artwork-img"
         src={`https://curated-api.herokuapp.com/img/${img}.png`}
         alt={`${name}`}/>
 
-      <div className="artwork__name">{`${name} |  ${year_completed}`}</div>
-      <div className="artist__materials">{materials}</div>
-    </div>
+      <figcaption>
+        <h4 className="artwork__name">{`${name} |  ${year_completed}`}</h4>
+        <h4 className="artist__materials">{materials}</h4>
+      </figcaption>
+    </figure>
   )
 }
 

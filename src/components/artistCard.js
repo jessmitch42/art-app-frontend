@@ -20,7 +20,7 @@ class ArtistCard extends Component {
     const formattedName = `${first_name} ${last_name}`.toUpperCase();
 
     return (
-      <div
+      <section
         id={`artist-${id}`}
         className="artist__container avoid-break">
 
@@ -38,7 +38,7 @@ class ArtistCard extends Component {
               alt="Artist Artwork Example"/>
         </Link>
 
-      </div>
+      </section>
     );
   }
 }

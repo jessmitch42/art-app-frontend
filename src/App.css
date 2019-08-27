@@ -1,40 +1,39 @@
 /* GENERAL */
 
-*, *:before, *:after{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:border-box;
-  box-sizing: border-box;
-}
-
 html {
   width: 100vw;
 }
 
 .wrapper {
-  padding: 7% 5%;
+  padding: 5%;
   max-width: 1000px;
 }
 
 hr {
-  color: #C32424;
-  border-color: #C32424;
-  background: #C32424;
+  color: #180D42;
+  border-color: #180D42;
+  background: #180D42;
 }
 
 a {
-  color: #DF029D;
   text-decoration: none;
-  /* font-weight: bold; */
+  color: #FFEEE8;
 }
 
-a.active {
-  color: #0f050c;
+p a {
+  color: #D99100;
+}
+
+p a:hover {
+  color: #FFEEE8;
+}
+
+a.active, a:active {
+  color: #D99100;
 }
 
 a:hover {
-  color: #C32424;
+  color: #296665;
 }
 
 /* HEADER */
@@ -45,7 +44,7 @@ a:hover {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  background-color: #C32424;
+  background-color: #180D42;
   height: 7rem;
   color: white;
   padding-left: 4%;
@@ -71,7 +70,7 @@ a:hover {
 }
 
 .App-header .nav-container a:hover {
-  color: #8E024B;
+  color: #296665;
 }
 
 
@@ -79,7 +78,7 @@ a:hover {
   font-size: 8rem;
   font-weight: bold;
   margin: 0;
-  color: #DF029D
+  color: #FFEEE8;
 }
 
 /* SELECT  */
@@ -122,11 +121,11 @@ a:hover {
 
 .artist__container h3.content-details {
   opacity: 0;
-  color: #DF029D;
+  color: #FFEEE8;
   position: absolute;
   bottom: -20%;
-  width: 100%;
-  background: #0f050c;
+  width: 94%;
+  background: #180D42;
   padding: 10px;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -162,19 +161,26 @@ a:hover {
 }
 
 .about-container {
-  color: #0f050c;
+  color: #FFEEE8;
   margin: auto;
-}
-
-.about-container span.about-page__quote {
-  color: #4c0412;
-  font-style: italic;
 }
 
 /* ARTIST INFO (BIO, ETC) */
 
+figure {
+  margin: 0.5em;
+}
+
+figure h4 {
+  margin: 0.5em 0;
+}
+
+.artwork-container {
+  color: #FFEEE8;
+}
+
 .artwork-container .artist-complete__container {
-  border: 5px solid #DF029D;
+  border: 5px solid #D99100;
   margin-bottom: 10px;
   padding: 0 20px;
 }
